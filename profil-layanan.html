@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roti Pelangi - Layanan dan Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #42210b;
+  background: #fff7ed;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 18px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(135deg, #ff8a00, #ff4d6d, #ffc300);
+  color: #ffffff;
+  padding: 28px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tagline {
+  max-width: 600px;
+  margin: 0;
+}
+
+.site-nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.hero {
+  padding: 44px 0 28px;
+}
+
+.hero-grid,
+.two-column,
+.schedule-box,
+.footer-inner {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-grid,
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hero-text,
+.card,
+.menu-card,
+.feature-box,
+.schedule-box {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(111, 53, 21, 0.12);
+}
+
+.image-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(111, 53, 21, 0.12);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.button-primary {
+  background: #ff5a36;
+  color: #ffffff;
+}
+
+.button-secondary {
+  background: #ffd166;
+  color: #5b2c00;
+}
+
+.section-block {
+  padding: 28px 0;
+}
+
+.alt-section {
+  background: #ffe5d0;
+}
+
+.info-grid,
+.menu-grid,
+.feature-list {
+  display: grid;
+  gap: 20px;
+}
+
+.info-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.menu-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.feature-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 20px;
+}
+
+.card h3,
+.menu-card h3,
+.feature-box h3,
+.site-footer h3 {
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(111, 53, 21, 0.12);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  border: 1px solid #f1c9a6;
+  text-align: left;
+}
+
+th {
+  background: #ff8a00;
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background: #fff3e6;
+}
+
+.schedule-box {
+  grid-template-columns: 1.4fr 0.6fr;
+  background: linear-gradient(135deg, #fff0d9, #ffd6a5);
+}
+
+.tall-image img {
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.site-footer {
+  background: #6f3515;
+  color: #ffffff;
+  padding: 24px 0;
+  margin-top: 24px;
+}
+
+.footer-inner {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .two-column,
+  .info-grid,
+  .menu-grid,
+  .feature-list,
+  .schedule-box,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-nav {
+    width: 100%;
+  }
+
+  .site-nav a,
+  .button-primary,
+  .button-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="eyebrow">Halaman Kedua</p>
+        <h1>Layanan dan Menu</h1>
+        <p class="tagline">Informasi layanan pemesanan, menu favorit, dan jam operasional toko roti.</p>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Beranda</a>
+        <a href="profil-layanan.html">Layanan &amp; Menu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-block">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">Layanan</p>
+          <h2>Pesan Roti Harian dan Kue Acara</h2>
+          <p>Roti Pelangi melayani pembelian langsung di toko, pemesanan harian melalui telepon, serta paket konsumsi untuk rapat, ulang tahun, dan acara sekolah.</p>
+          <div class="feature-list">
+            <div class="feature-box">
+              <h3>Pre-order Cepat</h3>
+              <p>Pelanggan dapat memesan H-1 untuk roti premium dan kue ulang tahun sederhana.</p>
+            </div>
+            <div class="feature-box">
+              <h3>Paket Acara</h3>
+              <p>Tersedia paket snack box isi 3 sampai 5 item untuk acara kantor dan keluarga.</p>
+            </div>
+            <div class="feature-box">
+              <h3>Custom Topping</h3>
+              <p>Kue dapat dihias dengan ucapan singkat, buah segar, atau topping cokelat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="image-card tall-image">
+          <img src="image/aneka roti.jpeg" alt="Aneka roti dan pastry pilihan Roti Pelangi">
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Menu Favorit</p>
+          <h2>Produk yang Paling Banyak Dipesan</h2>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-card">
+            <h3>Roti Cokelat</h3>
+            <p>Roti lembut dengan isian cokelat manis yang cocok untuk sarapan.</p>
+          </div>
+          <div class="menu-card">
+            <h3>Croissant Butter</h3>
+            <p>Pastry renyah dengan aroma mentega, cocok untuk kopi pagi.</p>
+          </div>
+          <div class="menu-card">
+            <h3>Bolu Ulang Tahun</h3>
+            <p>Kue sederhana dengan pilihan rasa vanila, cokelat, atau stroberi.</p>
+          </div>
+          <div class="menu-card">
+            <h3>Snack Box</h3>
+            <p>Paket praktis untuk rapat berisi roti, kue, dan minuman ringan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="container schedule-box">
+        <div>
+          <p class="eyebrow">Jam Operasional</p>
+          <h2>Kunjungi Toko Kami</h2>
+          <p>Senin - Jumat: 07.00 - 20.00 WIB</p>
+          <p>Sabtu - Minggu: 07.00 - 21.00 WIB</p>
+        </div>
+        <a class="button-primary" href="index.html">Kembali ke Profil Utama</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Roti Pelangi</h3>
+        <p>Email: halo@rotipelangi.id</p>
+      </div>
+      <a href="index.html">Kembali ke beranda</a>
+    </div>
+  </footer>
+
+
+</body></html>
